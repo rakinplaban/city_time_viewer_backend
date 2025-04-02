@@ -2,7 +2,7 @@
 
 **Hello there! I'm Hikari!** ☀️ ☀️ Standing here on the seashore with the warm sun shining down, I’d love to introduce you to this project with a bright smile! 🌊👒
 
-<img src="202532222373833.png" height=300 width=200>
+<img src="static/202532222373833.png" height=300 width=200>
 
 ## 🌏 What is this?
 
@@ -19,7 +19,7 @@ This is a **Flask API** that helps you find the **current time** in any city you
 
 1. Set up your virtual environment:
    ```sh
-   python -m venv venv
+   python -m venv .venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 

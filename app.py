@@ -1,10 +1,11 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template, url_for
 from flask_cors import CORS
 import pytz
 from datetime import datetime
 import requests
 import os
 from dotenv import load_dotenv
+import markdown
 
 load_dotenv()
 
@@ -14,6 +15,10 @@ CORS(app)
 # You'll need to get a free API key from timezonedb.com
 TIMEZONEDB_API_KEY = os.getenv('TIMEZONEDB_API_KEY')
 GEONAMES_USER_ID = os.getenv('GEONAMES_USER_ID')
+
+@app.route("/")
+def home():
+    return render_template("index.html")
 
 @app.route('/api/time', methods=['GET'])
 def get_city_time():
